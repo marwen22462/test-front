@@ -2,8 +2,8 @@ import React from "react";
 import { Card } from "react-bootstrap";
 
 const CommentCard = (props) => {
-  const { comment = {} } = props;
-  const { name = "", body = "" } = comment;
+  
+  const { name , body  } = props.comment;
   return (
     <div>
       <Card bg="info" style={{ width: "18rem" }}>

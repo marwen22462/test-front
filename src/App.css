@@ -4,4 +4,25 @@
 }
 .card{
   margin: 35px;
+  margin-left: 80px;
+}
+.user-f{
+  background-color: rgb(172, 210, 248);
+}
+.btn-primary{
+  padding: 8px 124px;
+}
+.btn-success{
+  padding: 8px 80px;
+}
+.posts-f{
+  background-color: rgb(207, 207, 207);
+}
+.comment-f{
+  background-color: rgb(214, 199, 199);
+}
+.title{
+  display: flex;
+  justify-content: center;
+  color: royalblue;
 }

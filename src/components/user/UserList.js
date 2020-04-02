@@ -6,24 +6,30 @@ import UserCard from "./UserCard"
 
 export default class UserList extends Component {
     state = {
-        persons:[]
+        users:[],
+        posts: []
     }
   componentDidMount = () => {
       axios
       .get(`https://jsonplaceholder.typicode.com/users`)
       .then(response => {
         // console.log(response);
-        this.setState({ persons: response.data });
+        this.setState({ users: response.data });
       })
-      
+      axios
+      .get(`https://jsonplaceholder.typicode.com/posts/`)
+      .then(response => {
+        console.log(response);
+        this.setState({ posts: response.data });
+      })
   }
     
   render() {
     return (
       <div>
         <ul className = "userCard">
-          {this.state.persons.map((person, key) => (
-            <UserCard person={person} key={key} />
+          {this.state.users.map((user, key) => (
+            <UserCard user={user} key={key} />
           ))}
         </ul>
       </div>
